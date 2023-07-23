@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #1a1a1a;
+}
+
+header {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff9900;
+}
+
+main {
+    padding: 50px;
+}
+
+.section {
+    margin: 50px 0;
+}
+
+.section h1,
+.section h2 {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #333;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Dark theme styles */
+.dark-theme {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+/* Animation effects */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.section {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Previous styles... */
+
+nav ul li {
+    margin: 0 15px;
+    position: relative; /* Added to make the dropdown work */
+}
+
+nav ul li .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    border: 1px solid #555;
+}
+
+nav ul li:hover .dropdown {
+    display: block;
+}
+
+nav ul li .dropdown li {
+    padding: 10px;
+}
+
+nav ul li .dropdown li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li .dropdown li a:hover {
+    color: #ff9900;
+}
+
+
+/* Previous styles... */
+
+.carousel-container {
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-slide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute;
+}
+
+.carousel-slide img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/* Previous styles... */
+
+.technology-page {
+    /* display: flex;
+    flex-direction: row; */
+    align-items: center;
+    padding: 50px;
+}
+.card{
+     display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 50px;
+
+}
+.content-left,
+.content-right {
+    flex: 1;
+    padding: 20px;
+}
+
+.image-left,
+.image-right {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.image-left img,
+.image-right img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Alternate the image and content positions */
+.technology-page:nth-child(odd) .content-left,
+.technology-page:nth-child(even) .content-right {
+    order: 2;
+}
+
+.technology-page:nth-child(odd) .image-right,
+.technology-page:nth-child(even) .image-left {
+    order: 1;
+}
+
+
+/* Your common styles for all pages go here... */
+
+/* Styles for the technology buttons */
+.technology-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.technology-button {
+    cursor: pointer;
+    padding: 30px;
+    margin: 50px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 300px;
+}
+
+/* AI button styles */
+.ai-button {
+    background-image: url('ai.jpg');
+}
+
+/* ML button styles */
+.ml-button {
+    background-image: url('ml.jpg');
+}
+
+/* VR button styles */
+.vr-button {
+    background-image: url('arvr.jpg');
+}
+
+/* Hover effect */
+.technology-button:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Blur effect for other elements when a button is hovered
+.technology-button:hover ~ .technology-button-container:not(:hover) {
+    filter: blur(100px);
+} */
+/* Blur effect for other elements when a button is hovered */
+.blur-effect {
+    filter: blur(1.5px);
+}
