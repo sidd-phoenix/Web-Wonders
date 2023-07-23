@@ -15,6 +15,65 @@ header {
     padding: 10px;
 }
 
+
+/* Reset styles for header */
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2d2d2d;
+    padding: 10px;
+    color: #fff;
+    margin:0 0 3px 0;
+  }
+  
+  /* Logo styles */
+  .logo img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  /* Search bar styles */
+  .search-bar input[type="text"] {
+    padding: 5px;
+    border: 1px solid #fff;
+    border-radius: 5px 0 0 5px;
+  }
+  
+  .search-bar button {
+    padding: 5px 10px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 0 5px 5px 0;
+    color: #333;
+  }
+  
+  /* User buttons styles */
+  .user-buttons button {
+    padding: 5px 10px;
+    margin-left: 10px;
+    border: none;
+    background-color: #ff9900;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .user-buttons button.login-button {
+    background-color: #007bff;
+  }
+  
+  /* Optional: Add hover effect for buttons */
+  .user-buttons button:hover {
+    background-color: #ffad33;
+  }
+  
+  .user-buttons button.login-button:hover {
+    background-color: #0056b3;
+  }
+  
+
+
 nav ul {
     list-style: none;
     display: flex;
@@ -89,6 +148,7 @@ nav ul li .dropdown {
     left: 0;
     background-color: #333;
     border: 1px solid #555;
+    z-index: 1;
 }
 
 nav ul li:hover .dropdown {
@@ -113,9 +173,11 @@ nav ul li .dropdown li a:hover {
 
 .carousel-container {
     width: 100%;
-    max-width: 600px;
+    /* max-width: 70vw; */
+    min-height: 50vh;
     overflow: hidden;
     position: relative;
+    margin: auto;
 }
 
 .carousel-slide {
